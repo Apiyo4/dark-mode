@@ -6,8 +6,12 @@ export default function Details({coinData}){
 
         < div >
             <Navbar />
+                
           
                 <div className='details' >
+                <div className="headingCenter">
+                    <h2>Top 10 Coins by market capitalization</h2>
+                </div>  
                                 
                 <table>
                 <tr>

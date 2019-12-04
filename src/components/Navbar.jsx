@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -6,6 +6,13 @@ const Navbar = () => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
+  useEffect(()=>{
+    if(darkMode === true){
+      document.body.classList.add('dark-mode')
+    }else{
+      document.body.classList.remove('dark-mode')
+    }
+  }, [darkMode])
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>

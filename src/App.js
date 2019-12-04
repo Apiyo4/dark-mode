@@ -27,7 +27,11 @@ import Homepage from './components/Homepage';
         <Route exact path= '/' render={(props)=>{
           return <Homepage {...props} coinData={coinData}/>
         }}  />
-        <Route path = '/details' component = {Details} />
+        <Route path = '/details'  render = {(props)=>{
+          return <Details {...props} coinData= {coinData} />
+        }}
+        
+        />
       </div>
     );
   };
